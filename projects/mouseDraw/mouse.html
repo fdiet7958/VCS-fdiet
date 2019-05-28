@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="css/mouse.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/mouse.js"></script>
+
+        <title>Mouse Draw</title>
+
+</head>
+
+<body onload="InitMouseDraw()">
+    <h1 align="center">Mouse Draw Project by Fenix D.</h1>
+    <hr>
+    <div align="center">
+    <canvas id="drawCanvas" width="1000" height="800" style="border: 3px solid crimson"></canvas>
+    <br><br>
+    <button onclick="javascript:clearArea();return false;">Clear Area</button>
+    Line width: <select id="selWidth">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="9" selected="selected">9</option>
+        <option value="11">11</option>
+    </select>
+    Color: <select id="selColor">
+        <option value="black">Black</option>
+        <option value="blue" selected="selected">Blue</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="grey">Grey</option>
+    </select>
+    <input id="tictac" type="number" placeholder="Enter tic-tac-toe size">
+    <button onclick="javascript:ticTacToe();return false;">Draw Tic-Tac-Toe</button>
+    </div>
+</body>
+
+</html>

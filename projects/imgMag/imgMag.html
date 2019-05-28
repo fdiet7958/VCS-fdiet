@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/imgMag.css">
+<script src="js/imgMag.js"></script>
+
+<title>Image Magnifier</title>
+
+</head>
+<body>
+
+<h1>Image Magnifier Glass by Fenix D</h1>
+
+<p>Mouse over the image:</p>
+
+
+<div>
+  select an image file:
+  <input type="file" id="fileInput">
+</div>
+<div class="img-magnifier-container">
+  <img id="myimage" src="" width="1200" height="800">
+</div>
+
+<script>
+  window.onload = function () {
+    var fileInput = document.getElementById('fileInput');
+    var img = document.getElementById('myimage');
+
+    fileInput.addEventListener('change', function (e) {
+      //taking only first file input into <input> tag
+      var file = fileInput.files[0];
+      var imageType = /image.*/;
+      var glass = document.getElementById("magglass");
+      if (glass) {
+        glass.parentNode.removeChild(glass);
+      }
+
+      if (file.type.match(imageType)) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          img.src = reader.result;
+          magnify("myimage", 3);
+
+          imageZoom("myimage", "myresult");
+        }
+        reader.readAsDataURL(file);
+      } else {
+        fileDisplayArea.innerHTML = "File not supported!";
+      }
+    });
+  }
+</script>
+
+<p>Feel free to change the strength of the magnifier glass when initiating the magnify function.</p>
+
+</body>
+</html>

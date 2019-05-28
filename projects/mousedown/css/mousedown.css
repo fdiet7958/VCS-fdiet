@@ -1,0 +1,32 @@
+body {
+  background-color: #990000;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+  background-color: #d04114;
+  border: 5px solid #022399;
+  border-spacing: 20px;
+}
+
+tr {
+  border: 5px solid #022399;
+  background-color: #64616b;
+}
+
+td {
+  border: 5px solid #022399;
+  background-color: #64616b;
+  padding: 100px;
+}
+
+.redCell {
+  background-color: #ff0000;
+  border: 5px solid #022399;
+}
+
+.yellowCell {
+  background-color: #2400ff;
+  border: 5px solid #022399;
+}

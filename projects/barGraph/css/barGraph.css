@@ -1,0 +1,30 @@
+body {
+    background-color: darkcyan;
+}
+
+#canvas {
+    background: #1cffec;
+    box-shadow: 5px 5px 5px #007710cc;
+    border: 5px solid #001488;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 150px;
+    height: 50px;
+    border: 2px solid #4643ce;
+    background-color: #ffffff;
+}
+
+input[type="text"] {
+    width: 150px;
+    height: 45px;
+    border: 2px solid #4643ce;
+    background-color: #ffffff;
+}
+
+button {
+    height: 50px;
+    background-color: #4643ce;
+    color: white;
+}

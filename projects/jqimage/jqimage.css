@@ -1,0 +1,21 @@
+body {
+  background-color: #b40000
+}
+
+img {
+  text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.zoom {
+    transition: transform .1s;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+}

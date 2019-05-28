@@ -1,0 +1,73 @@
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="css/myGraph.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+      
+        <title>My Graph</title>
+
+        <script src="js/myGraph.js"></script>
+
+</head>
+
+<body onload="init()">
+    <div align="center">
+        <h1>JavaScript Graph by Fenix D.</h1>
+        <h2>Box Office Gross of the Top 6 Highest Grossing Films of 2019 (In Millions $)</h2>
+        <h3>Over the course of 12 Weeks In Theaters</h3>
+
+        <br>
+            <select id="company" value="" name="">
+                <option value="">Select Film</option>
+                <option value="Thanos">Avengers: Infinity War</option>
+                <option value="Panther">Black Panther</option>
+                <option value="Dino">Jurassic World: Fallen Kingdom</option>
+                <option value="Incredible">Incredibles 2</option>
+                <option value="Aquaman">Aquaman</option>
+                <option value="Queen">Bohemian Rhapsody</option>
+            </select>
+
+            <select id="month" value="" name="">
+                <option value="">Select Day</option>
+                <option value="Jan">Week 1</option>
+                <option value="Feb">Week 2</option>
+                <option value="Mar">Week 3</option>
+                <option value="Apr">Week 4</option>
+                <option value="May">Week 5</option>
+                <option value="Jun">Week 6</option>
+                <option value="Jul">Week 7</option>
+                <option value="Aug">Week 8</option>
+                <option value="Sep">Week 9</option>
+                <option value="Oct">Week 10</option>
+                <option value="Nov">Week 11</option>
+                <option value="Dec">Week 12</option>
+            </select>
+            <input type="text" id="profit" placeholder="Enter Gross (in Millions)">
+            <button type="button" onclick="update()">Update Graph</button>
+        <br>
+
+        <canvas id="canvas" height="800" width="1300">
+        </canvas>
+        <br>
+        <!--Legends for Dataplot -->
+        <span style="color:#eef106"> Avengers: Infinity War</span>
+        <span style="color:#000000"> |</span>
+        <span style="color:#000000"> Black Panther</span>
+        <span style="color:#000000"> |</span>
+        <span style="color:#0083b7"> Jurassic World: Fallen Kingdom</span>
+        <span style="color:#000000"> |</span>
+        <span style="color:#df0000"> Incredibles 2</span>
+        <span style="color:#000000"> |</span>
+        <span style="color:#23b100"> Aquaman</span>
+        <span style="color:#000000"> |</span>
+        <span style="color:#a909f3"> Bohemian Rhapsody</span>
+    </div>
+    
+</body>
+
+</html>

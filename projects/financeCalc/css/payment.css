@@ -1,0 +1,33 @@
+body {
+    background-image: url("images/money.png");
+}
+
+.myFont {
+    font-family: 'Marvel', sans-serif;
+    font-size: 50px;
+    color: white; 
+}
+
+table {
+    border: 5px solid #007a1f;
+    font-family: 'Marvel', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+ul {
+    width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.entryTable {
+    border: 5px solid #007a1f;
+    font-family: 'Marvel', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+img {
+    border: 5px solid #007a1f;
+}

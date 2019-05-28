@@ -1,0 +1,156 @@
+body {
+  background-image: url("..images/fire.png");
+  background-color: red;
+}
+
+h1 {
+  font-family: 'Special Elite', cursive;
+}
+
+h4 {
+  font-family: 'Special Elite', cursive;
+}
+
+h3 {
+  font-family: 'Special Elite', cursive;
+}
+
+p {
+  font-family: 'Special Elite', cursive;
+}
+
+li {
+  font-family: 'Special Elite', cursive;
+}
+
+/*Dropdown*/
+.hamburger {
+  width: 50px;
+  height: 5px;
+  background-color: RED;
+  margin: 6px 0;
+}
+
+.theTitle {
+  grid-area: header;
+  text-align: center;
+}
+
+.projects {
+  grid-area: menu;
+}
+
+.Logos {
+  grid-area: main;
+  text-align: center;
+}
+
+.allInfo {
+  grid-area: footer;
+  text-align: center;
+}
+
+.toCenter {
+  text-align: center;
+  color: #000000;
+  font-size: 1.0em;
+}
+
+.textChange {
+  colors: ##169fec;
+}
+
+ul {
+  font-size: 0.8em;
+}
+
+.moveRt {
+  margin-left: 10px;
+
+.myBlue {
+    color: #0000FF;
+    font-weight: 600;
+  }
+
+  /*.theTitle { grid-area: header; }
+.Logos { grid-area: menu; }
+.Projects { grid-area: main; }
+.allCreative { grid-area: right; }
+.allInfo { grid-area: footer; }*/
+  .grid-container {
+    background-image: url("../images/film.jpeg");
+    border: 6px solid RED;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px BLUE;
+    margin: 50px;
+    display: grid;
+    /*
+  grid-template-areas:
+    'header header header header header header right'
+    'menu main main main main right'
+    'menu footer footer footer footer right';
+  */
+    grid-template-columns: 1fr 4fr 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "menu header header right"
+      "menu main ... right"
+      "... footer ... ...";
+    grid-gap: 10px;
+    background-color: #ff0000;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 40em) {
+    body {
+      background-image: url("images/fire.jpg");
+    }
+
+    .grid-container {
+      background-image: url("images/film.jpeg");
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto;
+      grid-template-areas:
+        "header"
+        "main"
+        "right"
+        "menu"
+        "footer";
+    }
+  }
+
+  .grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 6px solid RED;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 255, 0.7);
+    /*text-align: center;*/
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+  .mySpecialElite {
+    font-family: 'Special Elite', cursive;
+    color: #0000FF text-shadow: 2px 2px 4p #FF0000;
+  }
+
+  .myMarvel {
+    font-family: 'Marvel', sans-serif;
+    color: #0000FF text-shadow: 2px 2px 4p #FF0000;
+  }
+
+  h1 {
+    font-family: 'Special Elite', cursive;
+  }
+
+  h4 {
+    font-family: 'Special Elite', cursive;
+  }
+
+  h3 {
+    font-family: 'Special Elite', cursive;
+  }
+
+  p {
+    font-family: 'Special Elite', cursive;
+  }

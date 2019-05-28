@@ -1,0 +1,46 @@
+body {
+  background-color: #ac0000;
+}
+
+.responsive {
+  width: 100%;
+  height:auto;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+  border: 5px solid #0035aa;
+  border-spacing: 15px;
+}
+
+tr {
+  border: 5px solid #0035aa;
+}
+
+td {
+  border: 5px ridge #0035aa;
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 10px 10px 30px #0038b5;
+}
+
+th {
+  font-size: 1.5em;
+  border: 5px solid #0035aa;
+  width: 50%;
+  text-align: center;
+  padding: 20px
+}
+
+.myBlue {
+  color: #0000FF;
+  font-weight: 600;
+}
+
+.toCenter {
+  text-align: center;
+  color: #000000;
+  font-size: 1.0em;
+}

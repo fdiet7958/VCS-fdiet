@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>History Quiz</title>
+
+  <style>
+    body {
+    background-image: url("images/america.jpeg");
+  }
+    h2 {
+    color: #004e9f;
+    }
+    h1 {
+    color: #004e9f;
+    text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+    }
+    h3 {
+    color: #ffffff;
+    text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>The American Revolution! - Fenix D</h1>
+  <br>
+  <br>
+  <h1> Answer the following questions.</h1>
+  <hr><br>
+  <form>
+    <h2 class="formLabels">In what year was the Declaration of Indepencence signed?</h2>
+    <input id="question1" type="text"><br><br><br><br><br>
+
+    <h2 class="formLabels">Which American general famously betrayed the Continetal Army?</h2>
+    <input id="question2" type="text"><br><br><br><br><br><br><br><br><br>
+
+    <h2 class="formLabels">Which battle resulted in the French supporting the United States against the British Empire?</h2>
+    <input id="question3" type="text"><br><br><br><br><br>
+
+    <h2 class="formLabels">Which American general had the nickname "Swamp Fox"?</h2>
+    <input id="question4" type="text"><br><br>
+
+    <input type="button" value="Submit" onclick="fun()">
+  </form>
+  <br>
+  <div id="res" style="width:445px;
+  font-size:13px; font-weight:bold;
+  font-family:Tahoma, Geneva, sans-serif;
+  display:none; height:30px;
+  margin:0px auto; padding-left:10px;
+  padding-top:9px; border:2px solid #999;
+  border-bottom:0;">
+  </div>
+
+  <script>
+    function fun() {
+      var question1 = document.getElementById("question1").value;
+      var question2 = document.getElementById("question2").value;
+      var question3 = document.getElementById("question3").value;
+      var question4 = document.getElementById("question4").value;
+      var res = document.getElementById("res");
+
+      res.style.display = "block";
+      if (question1 == "" || question2 == "" || question3 == "" || question4 == "") {
+        res.style.backgroundColor = "red";
+        res.style.color = "white";
+        res.innerHTML = "Please fill in All the Fields";
+      } else if (question1 == "1776" && question2 == "Benedict Arnold" && question3 == "Battle of Saratoga" && question4 == "Francis Marion") {
+        res.style.backgroundColor = "green";
+        res.style.color = "white";
+        res.innerHTML = "CONGRATULATIONS!!! You got them all right!";
+      } else {
+        res.style.backgroundColor = "red";
+        res.style.color = "white";
+        res.innerHTML = "Sorry, please try again.";
+      }
+
+    }
+  </script>
+</body>
+
+</html>

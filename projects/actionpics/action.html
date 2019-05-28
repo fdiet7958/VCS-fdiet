@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="action.js"></script>
+  <title>Action Pics</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="action.css">
+
+  <style>
+    .mySlides {display:none;}
+  </style>
+
+</head>
+
+<style>
+  body {
+    background-image: url("images/redstone.jpg")
+  }
+
+  .responsive {
+    width: 100%;
+    height:auto;
+  }
+
+  table {
+    width: 80%;
+    margin: auto;
+    border: 5px solid #0035aa;
+    border-spacing: 15px;
+  }
+
+  tr {
+    border: 5px solid #0035aa;
+  }
+
+  td {
+    border: 5px ridge #0035aa;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 10px 10px 30px #0038b5;
+  }
+
+  th {
+    font-size: 1.5em;
+    border: 5px solid #0035aa;
+    width: 50%;
+    text-align: center;
+    padding: 20px
+  }
+</style>
+
+<body>
+  <h1>Welcome to my Action Pictures Page! Created by Fenix D.</h1>
+  <br>
+  <table>
+    <tr>
+      <th colspan="2">
+        <h2>Action Picture Examples</h2>
+      </th>
+    </tr>
+    <tr>
+      <th>My Action Pictures</th>
+      <th>How I Made This Picture</th>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td>
+        <img class="responsive" src="images/A1firstactionpic.png" alt="A1 First Action Pic">
+      </td>
+      <td>
+
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td>
+        <img class="responsive" src="images/firstgif.gif" alt="First Gif">
+      </td>
+      <td>
+        <img class="responsive" src="images/howtogif.png" alt="How to Make a Gif">
+      </td>
+    </tr>
+  </table>
+
+  <br>
+  <hr>
+  <br>
+  <table>
+    <tr>
+      <th>
+        <h2 class="w3-center">My Slideshow</h2>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="images/img_snowtops.jpg" style="width:100%">
+          <img class="mySlides" src="images/img_lights.jpg" style="width:100%">
+          <img class="mySlides" src="images/img_mountains.jpg" style="width:100%">
+          <img class="mySlides" src="images/img_forest.jpg" style="width:100%">
+
+          <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h2>How I made these pictures</h2>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <hr>
+  <br>
+
+  <table>
+    <tr>
+      <th colspan="2">
+        <h2>My video!</h2>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <video width="320" height="240" controls>
+          <source src="video/movie.mp4" type="video/mp4">
+          <source src="video/movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+      </td>
+      <td>
+        <h2>...explain how I made the creative.</h2>
+      </td>
+    </tr>
+    </video>
+  </table>
+
+  <br>
+  <hr>
+  <br>
+  <h1><span class="myBlue" class="toCenter"><a href="http://www.westada.tech/a1/fenixd/">Click Here to Return to the Home Page</a></span></h1>
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = x.length
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+  <p><a href="http://www.westada.tech/a1/fenixd/">Click Here to Return to the Home Page</a></p>
+</body>
+
+</html>

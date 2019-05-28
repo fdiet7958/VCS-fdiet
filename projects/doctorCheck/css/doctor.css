@@ -1,0 +1,16 @@
+body {
+    background-color: crimson;
+}
+
+select {
+    height: 50px;
+    background-color: #791313;
+    color: white;
+}
+
+button {
+    border-radius: 50%;
+    height: 50px;
+    background-color: #791313;
+    color: white;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Quadratic</title>
+
+  <style>
+    body {
+    background-image: url("bigstock-Maths-formulas-on-chalkboard-b-88875161.jpg");
+  }
+    h2 {
+    color: #ffffff;
+    text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+    }
+    h1 {
+    color: #ffffff;
+    text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+    }
+    h3 {
+    color: #ffffff;
+    text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;  
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Quadratics! - Fenix D</h1>
+
+  <h1> Problem 1. Find the roots of this quadratic:</h1>
+  <h1>X<sup>2</sup>+ X - 6 = 0</h1>
+  <br>
+  <hr><br>
+  <form>
+    <h2 class="formLabels">Enter the First Root of the Quadratic:</h2>
+    <input id="rootOne" type="text"><br><br>
+
+    <h2 class="formLabels">Enter the Second Root of the Quadratic:</h2>
+    <input id="rootTwo" type="text"><br><br>
+
+    <input type="button" value="Submit" onclick="fun()">
+  </form>
+  <br>
+  <div id="res" style="width:445px;
+  font-size:13px; font-weight:bold;
+  font-family:Tahoma, Geneva, sans-serif;
+  display:none; height:30px;
+  margin:0px auto; padding-left:10px;
+  padding-top:9px; border:2px solid #999;
+  border-bottom:0;">
+  </div>
+  <hr>
+  <h3>Assignment</h3>
+  <h3>1. Add two input boxes for the two roots, and a submit button</h3>
+  <h3>(answers are X-2 and X+3 in either order)</h3>
+  <h3>2. If answered correctly, show a big congratulations!</h3>
+  <h3>3. If wrong, say sorry...please try again</h3>
+  <h3>4. Style this page -- fun, impressive, creative!</h3>
+
+  <script>
+    function fun() {
+      var rootOne = document.getElementById("rootOne").value;
+      var rootTwo = document.getElementById("rootTwo").value;
+      var res = document.getElementById("res");
+
+      res.style.display = "block";
+      if (rootOne == "" || rootTwo == "") {
+        res.style.backgroundColor = "red";
+        res.style.color = "white";
+        res.innerHTML = "Please fill in All the Fields";
+      } else if (rootOne == "X-2" && rootTwo == "X+3") {
+        res.style.backgroundColor = "green";
+        res.style.color = "white";
+        res.innerHTML = "CONGRATULATIONS!!!";
+      } else if (rootOne == "X+3" && rootTwo == "X-2") {
+        res.style.backgroundColor = "green";
+        res.style.color = "white";
+        res.innerHTML = "CONGRATULATIONS!!!";
+      } else {
+        res.style.backgroundColor = "red";
+        res.style.color = "white";
+        res.innerHTML = "Sorry, please try again.";
+      }
+
+    }
+  </script>
+</body>
+
+</html>

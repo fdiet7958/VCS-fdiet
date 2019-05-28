@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/splitImg.css">
+
+<script src="js/splitImg.js"></script>
+
+<title>Split Image</title>
+
+</head>
+<body>
+
+<h1>Compare Two Images - By Fenix D</h1>
+
+<div>
+    Select first image file:
+    <input type="file" id="fileInput1">
+  </div>
+  <div>
+      Select second image file:
+      <input type="file" id="fileInput2">
+    </div>
+
+<p>Click and slide the blue slider to compare two images:</p>
+
+<div class="img-comp-container">
+  <div class="img-comp-img">
+    <img src="" width="800" height="600" id="img1">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="" width="800" height="600" id="img2">
+  </div>
+</div>
+
+<script>
+    window.onload = function () {
+      var fileInput1 = document.getElementById('fileInput1');
+      var fileInput2 = document.getElementById('fileInput2');
+  
+      fileInput1.addEventListener('change', function (e) {
+        //taking only first file input into <input> tag
+        var file = fileInput1.files[0];
+        var imageType = /image.*/;
+        var img = document.getElementById("img1");
+        
+  
+        if (file.type.match(imageType)) {
+          var reader = new FileReader();
+  
+          reader.onload = function (e) {
+            img.src = reader.result;
+          }
+          reader.readAsDataURL(file);
+        } else {
+          fileDisplayArea.innerHTML = "File not supported!";
+        }
+      });
+
+      fileInput2.addEventListener('change', function (e) {
+        //taking only first file input into <input> tag
+        var file = fileInput2.files[0];
+        var imageType = /image.*/;
+        var img = document.getElementById("img2");
+        
+  
+        if (file.type.match(imageType)) {
+          var reader = new FileReader();
+  
+          reader.onload = function (e) {
+            img.src = reader.result;
+          }
+          reader.readAsDataURL(file);
+        } else {
+          fileDisplayArea.innerHTML = "File not supported!";
+        }
+      });
+    }
+</script>
+<script>
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+</script>
+
+</body>
+</html>

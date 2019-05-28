@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special+Elite">
+  <link href="https://fonts.googleapis.com/css?family=Marvel" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  
+  <title>Fenix D. Homepage</title>
+  <style>
+    body {
+      background-image: url("images/fire.png");
+      background-color: red;
+    }
+
+    li {
+      font-family: 'Marvel', sans-serif;
+    }
+
+    /*Dropdown*/
+    .hamburger {
+      width: 50px;
+      height: 5px;
+      background-color: RED;
+      margin: 6px 0;
+    }
+
+    .theTitle {
+      grid-area: header;
+    }
+
+    .Logos {
+      grid-area: menu;
+    }
+
+    .Projects {
+      grid-area: main;
+    }
+
+    .allCreative {
+      grid-area: right;
+    }
+
+    .allInfo {
+      grid-area: footer;
+    }
+
+    .textChange {
+      text-align: center;
+      color: #ffffff;
+      background-color: #004bbd;
+      font-size: 1.5em;
+    }
+
+    ul {
+      font-size: 0.8em;
+      text-align: left;
+    }
+
+    .moveRt {
+      margin-left: 10px;
+    }
+
+    .myBlue {
+      color: #0000FF;
+      font-weight: 600;
+    }
+
+    .floatleft {
+      float: left;
+      padding: 30px;
+    }
+
+    .grid-container {
+      background-image: url("images/film.jpeg");
+      border: 6px solid RED;
+      border-radius: 10px;
+      box-shadow: 10px 10px 40px BLUE;
+      margin: 50px;
+      display: grid;
+      /*
+  grid-template-areas:
+    'header header header header header right'
+    'menu main main main main right'
+    'menu footer footer footer footer right';
+    */
+
+      grid-template-columns: 1fr 4fr 1fr 2fr;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "menu header header right"
+        "menu main ... right"
+        "menu main ... footer";
+
+      grid-gap: 10px;
+      background-color: #ff0000;
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 40em) {
+      body {
+        background-image: url("images/fire.jpg");
+      }
+
+      .grid-container {
+        background-image: url("images/film.jpeg");
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+          "header"
+          "main"
+          "right"
+          "menu"
+          "footer";
+      }
+    }
+
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 6px solid RED;
+      border-radius: 10px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 255, 0.7);
+      /*text-align: center;*/
+      padding: 20px 0;
+      font-size: 30px;
+    }
+
+    .container {
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    }
+  </style>
+
+</head>
+
+<body onload="renderTime()">
+
+  <div class="grid-container">
+    <div class="theTitle">
+      <h1 id="myName">Homepage Created by Fenix D</h1>
+      <p>(click my name to learn more about me)</p>
+      <div id="goodMorn"></div>
+      <div id="getPeriod"></div>
+      <h3 id="clockDisplay" class="container"></h3>
+      <div id="aboutMe">
+        <div>
+          <img class="floatleft" src="images/image1.jpeg" alt="Me at a track banquet" style="max-width:100%;height:auto;">
+        </div>
+        <br>
+        <h4>I am a Junior at Meridian High School</h4>
+        <ul>
+          <li>For my career I'd like to be a filmmaker</li>
+          <li>I am ran for the track team for Meridian High School</li>
+          <li>I am involved in the Theatre Department at Meridian High School</li>
+          <li>I am also involved in National Honors Society</li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="Logos">
+      <img src="images/warriors.png" alt="MHS Logo">
+      <img src="images/bsu.png" alt="BSU Logo">
+      <img src="images/westada2.1.png" alt="Westada Logo"></div>
+    <div class="Projects">
+      <h4 id="changeText" class="toCenter">Links to My Projects</h4>
+      <h4>P31: Git Hub</h4>
+      <p><a href="projects/VCS/VCS.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P30: Summer Break Countdown</h4>
+      <p><a href="projects/countdown/countdown.html">Click here</a> to count the days until freedom!</p>
+      <hr>
+      <h4>P29: Parallax</h4>
+      <p><a href="projects/parallax/parallax.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P28: Background Video</h4>
+      <p><a href="projects/videobackground/videobackground.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P27: W3 Split Image</h4>
+      <p><a href="projects/splitImg/splitImg.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P26: Image Magnify</h4>
+      <p><a href="projects/imgMag/imgMag.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P25: Custom Image Zoom</h4>
+      <p><a href="projects/customZoom/customZoom.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P24: W3 Image Zoon</h4>
+      <p><a href="projects/imgZoom/imgZoom.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P23: DOMinator Project</h4>
+      <p><a href="projects/DOMinator/DOMinator.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P23: DOM Project Part 2 - Good Morning!</h4>
+      <p><a href="projects/goodMorning/good.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P22: DOM Project Part 1 - Running Javascript Clock Practice</h4>
+      <p><a href="projects/domtime/domtime.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P21: Mouse Draw</h4>
+      <p><a href="projects/mouseDraw/mouse.html">Click here</a> to view the project.</p>
+      <hr>
+      <h4>P20: Bar Graph</h4>
+      <p><a href="projects/barGraph/barGraph.html">Click here</a> to view the graph.</p>
+      <hr>
+      <h4>P19: Doctor Chart</h4>
+      <p><a href="projects/doctorCheck/doctorCheck.html">Click here</a> to view the graph.</p>
+      <hr>
+      <h4>P18: Medical Chart</h4>
+      <p><a href="projects/healthGraph/patientdata.html">Click here</a> to view the graph.</p>
+      <hr>
+      <h4>P17: Graph and Table</h4>
+      <p><a href="projects/jsGraphing.1/jsGraph2.html">Click here</a> to view the graph.</p>
+      <hr>
+      <h4>P16: Custom Graph</h4>
+      <p><a href="projects/myGraph/myGraph.html">Click here</a> to view the graph.</p>
+      <hr>
+      <h4>P15: JS Graph</h4>
+      <p><a href="projects/jsGraphing/jsGraph.html">Click here</a> to view the graph.</p>
+      <hr>
+      <h4>P14: Finance Calculator</h4>
+      <p><a href="projects/financeCalc/financeCalc.html">Click here</a> to use the calculator.</p>
+      <hr>
+      <h4>P13: JS Calculator</h4>
+      <p><a href="projects/jsCalc/Calc.html">Click here</a> to use the calculator.</p>
+      <hr>
+      <h4>P12: Quiz Form</h4>
+      <p><a href="projects/quizForm/quizForm.html">Click here</a> to test your historical knowledge.</p>
+      <hr>
+      <h4>P11: Forms</h4>
+      <p><a href="projects/javascriptForms/javascriptForms.html">Click here</a> to view it.</p>
+      <hr>
+      <h4>P10: Final W3 Game</h4>
+      <p><a href="projects/games/w3Find/find.html">Click here</a> to play it.</p>
+      <hr>
+      <h4>P9: Paddle Game</h4>
+      <p><a href="projects/games/paddle/paddle.html">Click here</a> to play it.</p>
+      <hr>
+      <h4>P8: Javascript Clock (24 Hour, 60 Second Version)</h4>
+      <p><a href="projects/myClock2460/myClock2460.html">Click here</a> to see it.</p>
+      <p>I worked with <a href="http://westada.tech/a1/bodenr/projects/myclock.html">Boden</a>.</p>
+      <hr>
+      <h4>P7: Javascript Clock (24 Hour Version)</h4>
+      <p><a href="projects/myClock24/myClock24.html">Click here</a> to see it.</p>
+      <p>I worked with <a href="http://westada.tech/a1/bodenr/projects/myclock.html">Boden</a>.</p>
+      <hr>
+      <h4>P6: Javascript Clock (W3 - 12 Hour Version)</h4>
+      <p><a href="projects/myClock/myClock.html">Click here</a> to see it.</p>
+      <hr>
+      <h4>P5: Learning Javascript</h4>
+      <p><a href="projects/learnjavascript/learnjavascript.html">Click here</a> to see it.</p>
+      <hr>
+      <h4>P4: Action Picture Project</h4>
+      <p><a href="projects/actionpics/action.html">Click here to view it.</a></p>
+      <p>I worked with <a href="https://westada.tech/a1/bodenr/projects/actionpics.html">Boden</a> and <a href="http://www.westada.tech/a1/andyr/projects/Actionpics/action.html">Andy.</a></p>
+      <hr>
+      <h4>P3: JQ Mousedown Tic-Tac-Toe Project</h4>
+      <p><a href="projects/mousedown/mousedown.html">Click here to play!</a></p>
+      <hr>
+      <h4>P2.5: JQ Zoom/Hover Transition</h4>
+      <p><a href="projects/jqimage/jqimage.html">Click here to view it.</a></p>
+      <hr>
+      <h4>P2: Create a Webpage.</h4>
+      <p>I am inspired by and worked with <span class="blue"><a href="http://www.westada.tech/a1/hannahs/">Hannah</a> and <a href="http://www.westada.tech/a1/bodenr/">Boden.</a></span></p>
+      <hr>
+      <h4>P1: Create a virtual machine, install SW, backup online.</h4>
+      <p><a href="P1.html">Click here</a> to learn how I did it and <a href="http://www.westada.tech/a1/bodenr/projects/p1.html">Click here</a> to see how Boden did it.</p>
+    </div>
+    <div class="allCreative">
+      <h4>Creative Stuff</h4>
+      <p><a href="adventure/opening.html">Choose Your Own Adventure Game</a></p>
+    </div>
+    <div class="allInfo">
+      <h4>For More Information...</h4>
+    </div>
+  </div>
+
+</body>
+
+<script src="js/home.js"></script>
+<script src="projects/domtime/js/domtime.js"></script>
+
+</html>

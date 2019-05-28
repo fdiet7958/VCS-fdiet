@@ -1,0 +1,58 @@
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="css/barGraph.css">
+      
+        <title>Bar Graph</title>
+
+        <script src="js/barGraph.js"></script>
+
+</head>
+
+<body onload="init()">
+
+    <h1>Bar Graph by Fenix D.</h1>
+    <hr>
+    <div align="center">
+        <h2>Top Country by GDP(PPP)</h2>
+
+        <canvas id="canvas" height="400" width="650"></canvas>
+        <br>
+        <select id="country">
+            <option selected disabled hidden>Select Country</option>
+            <option value="usa">USA</option>
+            <option value="china">China</option>
+            <option value="india">India</option>
+            <option value="japan">Japan</option>
+            <option value="germany">Germany</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+            <option value="austrailia">Austrailia</option>
+            <option value="mexico">Mexico</option>
+            <option value="russia">Russia</option>
+            <option value="brazil">Brazil</option>
+            <option value="spain">Spain</option>
+            <option value="france">France</option>
+            <option value="italy">Italy</option>
+            <option value="poland">Poland</option>
+        </select>
+        <input type="text" id="gdp" placeholder="Enter GDP(PPP) here">
+        <button type="button" onclick="update()">Submit</button>
+    </div>
+
+    <article id="toStyleJustThis" class="toStyleThisAndOther">
+        <p><strong>DEFINITIONS: </strong></p>
+        <p><b>GDP (Gross Domestic Product): </b>A monetary measure of the market value of all the final goods and services produced by a country in a period of time, often annually. Source: U.S. Bureau of Economic Analysis</p>
+        <br>
+        <p><b>GDP PPP (Purchasing Power Parity): </b>an economic theory that compares different countries' currencies through a "basket of goods" approach. Source: Investopedia</p>
+    </article>
+    <br>
+    <p><a href="http://www.westada.tech/a1/fenixd/">Click here to return to home page</a></p>
+    
+</body>
+
+</html>

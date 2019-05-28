@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/customZoom.css">
+<script src="js/customZoom.js"></script>
+
+<title>Custom Zoom</title>
+
+</head>
+
+<body>
+
+<h1>Custom Image Zoom by Fenix Dietz</h1>
+
+<div>
+  select an image file:
+  <input type="file" id="fileInput">
+</div>
+
+<p>Mouse over the image:</p>
+
+<div class="img-zoom-container">
+  <img id="myimage" src="" width="1200" height="800">
+  <div id="myresult" class="img-zoom-result" width="800" height="800"></div>
+</div>
+
+<script>
+  window.onload = function () {
+    var fileInput = document.getElementById('fileInput');
+    var img = document.getElementById('myimage');
+
+    fileInput.addEventListener('change', function (e) {
+      //taking only first file input into <input> tag
+      var file = fileInput.files[0];
+      var imageType = /image.*/;
+      var lens = document.getElementById("imglens");
+      if (lens) {
+        lens.parentNode.removeChild(lens);
+      }
+
+      if (file.type.match(imageType)) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          img.src = reader.result;
+          imageZoom("myimage", "myresult");
+        }
+        reader.readAsDataURL(file);
+      } else {
+        fileDisplayArea.innerHTML = "File not supported!";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

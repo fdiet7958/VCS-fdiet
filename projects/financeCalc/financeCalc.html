@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="css/payment.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Marvel" rel="stylesheet">
+
+  <title>Finance Calculator</title>
+
+
+  <style>
+    body {
+        background-image: url("images/money.png");
+    }
+
+    .myFont {
+        font-family: 'Marvel', sans-serif;
+        font-size: 50px;
+        color: white; 
+    }
+
+    table {
+        border: 5px solid #007a1f;
+        font-family: 'Marvel', sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+
+    ul {
+        width: 400px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .entryTable {
+        border: 5px solid #007a1f;
+        font-family: 'Marvel', sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+
+    img {
+        border: 5px solid #007a1f;
+    }
+  </style>
+
+</head>
+
+<body>
+    <h1 class="myFont" align="center">Finance Calculator by Fenix D.</h1>
+
+    <table style="background-color: #82cc13" align="center">
+        <tr>
+            <th colspan="2">Loan Payment Equation</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <img src="images/finance.png" alt="Finance Formula" height="400" width="600">
+                <ul>
+                    <li>M = Monthly Payment</li>
+                    <li>P = Principle (Cost - Down Payment)</li>
+                    <li>r = APR (Annual Percentage Rate); r/12 is APR divided by 12 payments per year</li>
+                    <li>n = Number of Total Monthly Payments</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <table style="background-color: #82cc13" class="entryTable" align="center">
+        <tr>
+            <th colspan="2">Finance Calculator</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="cost"></td>
+            <td align="left"><p>Enter total cost</p></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="tax"></td>
+            <td align="left"><p>Enter the sales tax (for example: 6 for 6%)</p></td>
+        </tr>
+        <tr>
+            <td align="center"><button type="button" onclick="calcTax()">Calculate</button></td>>
+            <td align="left"><p>Click to dislplay tax amount</p></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="taxresult" readonly></td>
+            <td align="left"><p>Here is your tax amount</p></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="pricetax" readonly></td>
+            <td align="left"><p>Here is your price with tax included</p></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="down"></td>
+            <td align="left"><p>Enter the down payment</p></td>
+        </tr>
+        <tr>
+            <td align="center"><button type="button" onclick="calcPrinc()">Calculate</button></td>
+            <td align="left">Click here to calculate Principle: Cost - Down Payment</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="princ" readonly></td>
+            <td align="left"><p>Here is the amount to finance</p></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="apr"></td>
+            <td align="left"><p>Enter your APR</p></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="months"></td>
+            <td align="left"><p>Enter your total number of monthly payments</p></td>
+        </tr>
+        <tr>
+            <td align="center"><button type="button" onclick="calcResult()">Calculate</button></td>
+            <td align="left"><p>Click here to calculate monthly payment cost</p></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="result" readonly></td>
+            <td align="left"><p>Here is your monthly payment cost</p></td>
+        </tr>
+    </table>
+    <script src="js/finance.js"></script>
+</body>
+
+
+</html>

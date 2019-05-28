@@ -1,0 +1,62 @@
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="css/jsGraph.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+      
+        <title>JS Graph</title>
+
+        <script src="js/jsGraph.js"></script>
+
+</head>
+
+<body onload="init()">
+    <div align="center">
+        <h1>JavaScript Graph by Fenix D.</h1>
+        <h2>Monthly Profits of Idaho Companies(in $Millions)</h2>
+        <h3>(These numbers are not real, they are for JavaScript graphing practice!) </h3>
+
+        <br>
+            <select id="company" value="" name="">
+                <option value="">Select Company</option>
+                <option value="Albertsons">Albertsons</option>
+                <option value="Simplot">Simplot</option>
+                <option value="BoiseCas">Boise Cascade</option>
+            </select>
+
+            <select id="month" value="" name="">
+                <option value="">Select Month</option>
+                <option value="Jan">January</option>
+                <option value="Feb">February</option>
+                <option value="Mar">March</option>
+                <option value="Apr">April</option>
+                <option value="May">May</option>
+                <option value="Jun">June</option>
+                <option value="Jul">July</option>
+                <option value="Aug">August</option>
+                <option value="Sep">September</option>
+                <option value="Oct">October</option>
+                <option value="Nov">November</option>
+                <option value="Dec">December</option>
+            </select>
+            <input type="text" id="profit" placeholder="Enter Profit (in Millions)">
+            <button type="button" onclick="update()">Update Graph</button>
+        <br>
+
+        <canvas id="canvas" height="800" width="1300">
+        </canvas>
+        <br>
+        <!--Legends for Dataplot -->
+        <span style="color:#075fc4"> Albertsons</span>
+        <span style="color:#cfd246"> Simplot</span>
+        <span style="color:#43b700"> Boise Cascade</span>
+    </div>
+    
+</body>
+
+</html>
